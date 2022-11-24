@@ -56,4 +56,10 @@ docker container exec iris_model cat  ./train_metadata.json ./test_metadata.json
 ### Jenkins GitHub Integration with Webhook
 To integrate jenkins with Github, jenkins must have a public IP, I used Ngrok to convert localhost to a public web address. Under your repository name, click Settings and select webhooks. In the Payload URL, pass the jenkins public URL and add “//github-webhook/”. Fill in the remaining part as shown in the figure below.</br></br> 
 
-<img src="images/webhook.png"  width="600"/>
+<img src="images/webhook.png"  width="600"/></br>
+
+The next step is to create a credential in Jenkins to access GitHub. Under the “Manage Jenkins” select “Manage Credentials” . In “Stores scoped to Jenkins” Add credentials.
+
+### Build the Jenkins Jobs
+In the Jenkins Dashboard, click the New Item, give it a name, and select Freestyle Project.</br></br> 
+<img src="images/job1.png"  width="600"/></br>
