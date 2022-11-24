@@ -1,7 +1,7 @@
 # Automation of Machine Learning with Jenkins and Docker 
 The purpose of this project is building and automating a Machine Learning pipelines with DevOps tools like Docker and Jenkins. This is an End-to-End ML application with Flask REST API, Flasgger and Docker which build Jenkins job automatically on GitHub Commit.
 </br>
-<img src="pipeline.png"  height="400"/>
+<img src="images/pipeline.png"  height="400"/>
 
 ## Project Structure
 This project has the following steps:
@@ -34,12 +34,11 @@ To build the Docker image :
 docker image build -t iris_docker . 
 ```
 
-
 To run the Docker image:
 ```
 docker run -d --name iris_model --rm -p 3000:3000 iris_docker
 ```
-You can then test the API at <http://localhost:3000/apidocs/>  within the docker
+You can then test the API at <http://localhost:3000/apidocs/>  within the docker</br>
 
 
 To run commands inside the container:
