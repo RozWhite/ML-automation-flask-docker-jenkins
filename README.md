@@ -1,5 +1,7 @@
 # Automation of Machine Learning with Jenkins and Docker 
 The purpose of this project is building and automating a Machine Learning pipelines with DevOps tools like Docker and Jenkins. This is an End-to-End ML application with Flask REST API, Flasgger and Docker which build Jenkins job automatically on GitHub Commit.
+</br>
+<img src="pipeline.png"  height="400"/>
 
 ## Project Structure
 This project has the following steps:
@@ -7,9 +9,6 @@ This project has the following steps:
 2.	Deploying Machine Learning Model with Flask API and Flasgger 
 3.	Containerize Machine Learning Model with Docker
 4.	Automating Machine Learning pipeline with Jenkins and GitHub 
-
-</br>
-<img src="pipeline.png"  height="400"/>
 
 ## 1.	Building  Machine Learning
 In this step I used Logistic Regression model to to classify iris species. The Iris dataset can be download from scikit-learn which consists of 3 different types of irises' (Setosa, Versicolour, and Virginicapes). The output of the iris.py will be validation accuracy  and test accuracy as json file and a Pickle file to the machine learning model.
