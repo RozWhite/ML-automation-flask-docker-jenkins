@@ -62,4 +62,4 @@ The next step is to create a credential in Jenkins to access GitHub. Under the â
 
 ### Build the Jenkins Jobs
 In the Jenkins Dashboard, click the New Item, give it a name, and select Freestyle Project.</br></br> 
-<img src="images/job1.png"  width="600"/></br>
+<img src="images/Job1.png"  width="600"/></br>
