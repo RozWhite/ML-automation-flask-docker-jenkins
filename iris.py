@@ -24,7 +24,7 @@ X, y = load_iris(return_X_y=True)
 # In[3]:
 
 
-print(X.shape , y.shape)
+#print(X.shape , y.shape)
 
 
 # In[4]:
@@ -36,7 +36,7 @@ X_train, X_test, y_train,y_test = train_test_split(X, y, random_state=75 , test_
 # In[5]:
 
 
-print(X_train.shape , y_test.shape)
+#print(X_train.shape , y_test.shape)
 
 
 # # Build and Train the Model
@@ -104,7 +104,7 @@ classifier=pickle.load(pickle_in)
 
 
 prediction= classifier.predict(X_test)
-test_lg = accuracy_score(y_test,lg_predictions)
+test_lg = accuracy_score(y_test,prediction)
 
 
 # In[28]:
