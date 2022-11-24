@@ -8,11 +8,14 @@ This project has the following steps:
 3.	Containerize Machine Learning Model with Docker
 4.	Automating Machine Learning pipeline with Jenkins and GitHub 
 
+</br></br>
+
+<img src="pipeline.png"  height="400"/>
 ## 1.	Building  Machine Learning
 In this step I used Logistic Regression model to to classify iris species. The Iris dataset can be download from scikit-learn which consists of 3 different types of irises' (Setosa, Versicolour, and Virginicapes). The output of the iris.py will be validation accuracy  and test accuracy as json file and a Pickle file to the machine learning model.
 
 ## 2.	Deploying Machine Learning Model
-Flask is a framework to create APIs in Python and Flasgger helps to create a simple Frontend for ML ML application.
+Flask is a framework to create APIs in Python and Flasgger helps to create a simple Frontend for ML application.
 
 ### To run the application locally:
 Run: python app.py 
