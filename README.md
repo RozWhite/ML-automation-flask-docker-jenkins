@@ -54,3 +54,6 @@ docker container exec iris_model cat  ./train_metadata.json ./test_metadata.json
 ## 4.	Automating Machine Learning pipeline with Jenkins and GitHub 
 
 ### Jenkins GitHub Integration with Webhook
+To integrate jenkins with Github, jenkins must have a public IP, I used Ngrok to convert localhost to a public web address. Under your repository name, click Settings and select webhooks. In the Payload URL, pass the jenkins public URL and add “//github-webhook/”. Fill in the remaining part as shown in the figure below. 
+</br>
+<img src="images/webhook.png"  width="g00"/>
