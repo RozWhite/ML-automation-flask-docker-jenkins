@@ -62,7 +62,7 @@ The next step is to create a credential in Jenkins to access GitHub. Under the â
 
 ### Build the Jenkins Jobs
 #### JOB #1:
-The first job the first Job will automatically pull repo from the GitHub Repo just by giving some triggers and then building a Docker image. In the Jenkins Dashboard, click the New Item, give it a name, and select Freestyle Project. In the Build Section, if there is a container image available, we need to delete it  then build a new Docker image and container.</br>
+The first job the first Job will automatically pull repo from the GitHub Repo just by giving some triggers and then building a Docker image. In the Jenkins Dashboard, click the New Item, give it a name, and select Freestyle Project. In the Build Section, if there is a Docker container available, we need to delete it  then build a new Docker image and container.</br>
 
 ```
 docker rm -f iris_model
