@@ -75,11 +75,11 @@ docker run -d --name iris_model --rm -p 3000:3000 iris_docker
 This job is triggered after the first job is completed. Therefore, in the "Build Triggers" section, we need to select the "Build after other projects are built" option.Here we execute commands inside the container created by Job 1 and read the model validation accuracy and test accuracy.</br></br> 
 <img src="images/Job2.png"  width="600"/></br>
 
-#### Console Output of Job2:
+### Console Output of Job2:
 <img src="images/console.JPG"  width="600"/></br>
 
 You can then test the API at <http://localhost:3000/apidocs/></br></br>
 <img src="images/UI.JPG"  width="600"/></br>
 
-#### New Commit:
+### New Commit:
 Try to do a commit in GitHub and see how each step runs automatically. 
