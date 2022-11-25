@@ -62,20 +62,24 @@ The next step is to create a credential in Jenkins to access GitHub. Under the â
 
 ### Build the Jenkins Jobs
 #### JOB #1:
-The first job the first Job will automatically pull repo from the GitHub Repo just by giving some triggers. In the Jenkins Dashboard, click the New Item, give it a name, and select Freestyle Project.</br></br> 
+The first job the first Job will automatically pull repo from the GitHub Repo just by giving some triggers and then building a Docker image. In the Jenkins Dashboard, click the New Item, give it a name, and select Freestyle Project. In the Build Section, if there is a container image available, we need to delete it  then build a new Docker image and container.</br>
+
+```
+docker rm -f iris_model
+docker image build -t iris_docker . 
+docker run -d --name iris_model --rm -p 3000:3000 iris_docker
+``` 
 <img src="images/Job1.png"  width="600"/></br>
 
 #### JOB #2:
-This job is triggered after the first job is completed. Therefore, in the "Build Triggers" section, we need to select the "Build after other projects are built" option.Here we execute commands inside the container created by Job 1 and read the model validation accuracy  and test accuracy.</br></br> 
+This job is triggered after the first job is completed. Therefore, in the "Build Triggers" section, we need to select the "Build after other projects are built" option.Here we execute commands inside the container created by Job 1 and read the model validation accuracy and test accuracy.</br></br> 
 <img src="images/Job2.png"  width="600"/></br>
 
 #### Console Output of Job2:
 <img src="images/console.JPG"  width="600"/></br>
 
-You can then test the API at <http://localhost:3000/apidocs/></br>
+You can then test the API at <http://localhost:3000/apidocs/></br></br>
+<img src="images/UI.JPG"  width="600"/></br>
 
 #### New Commit:
-Try to do a commit in GitHub and see how each step runs automatically. Before committing new changes to Git, you must delete the Docker container:
-```
-docker rm -f iris_model
-```
+Try to do a commit in GitHub and see how each step runs automatically. 
